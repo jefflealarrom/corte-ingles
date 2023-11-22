@@ -62,12 +62,13 @@
 .offer ul {
     padding: 20px;
     display: flex;
+    text-transform: capitalize;
 }
 
 .offer ul li {
     padding: 5px;
 }
- 
+
 .green {
     color: green;
 }
@@ -85,15 +86,77 @@
     margin-right: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 50px;
+    padding-left: 150px;
+    max-width: 80%
+}
+
+.grid-item {
+    text-align: left;
+    background-color: white;
+}
+
+.grid-item h2,
+.grid-item p {
+    background-color: white;
+    text-transform: capitalize;
+    font-weight: lighter;
+    padding-left: 20px;
+}
+
+.grid-item p {
+    color: grey;
+    padding-bottom: 30px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.grid-info {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    color: green;
+    padding: 10px;
+}
+
+button {
+    background-color: #ffffff;
+    color: green;
+    padding: 10px 20px;
+    border: 1px solid green;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: green;
+    color: black;
+}
+
+button a {
+    background-color: inherit;
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
     .info {
+        height: auto;
         flex-direction: column;
         align-items: center;
-        height: auto;
     }
 
     .logo {
-        width: 50%; /* O ajusta según tus necesidades */
+        width: 50%;
         margin-bottom: 15px;
     }
 
@@ -103,7 +166,7 @@
     }
 
     .menu li {
-        margin: 5px 0; /* Ajusta según tus necesidades */
+        margin: 5px 0;
     }
 
     .navbar {
@@ -117,7 +180,18 @@
     }
 
     .nav-list li {
-        margin: 10px 0; /* Ajusta según tus necesidades */
+        margin: 10px 0;
+    }
+
+    .nav-list a {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: rgb(71, 71, 71);
+        font-size: 24px;
     }
 
     .offer ul {
@@ -134,7 +208,14 @@
     }
 
     .navbardos ul li {
-        margin: 10px 0; /* Ajusta según tus necesidades */
+        margin: 10px 0;
         margin-right: 0;
     }
+
+    .grid {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
+
